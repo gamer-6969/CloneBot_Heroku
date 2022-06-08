@@ -15,8 +15,8 @@ from utils.restricted import restricted
 
 logger = logging.getLogger(__name__)
 
-default_max_folders = 4
-default_max_folders_vip = 10
+default_max_folders = 50
+default_max_folders_vip = 50
 
 udkey_folders = 'folder_ids'
 udkey_folders_cache = 'folder_ids_cache'
@@ -257,7 +257,7 @@ def set_folders(update, context):
             callback_query_prefix + '_replace',
             page_data,
             page=page,
-            max_per_page=10,
+            max_per_page=15,
         )
     else:
         inline_keyboard_drive_ids = []
